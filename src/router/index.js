@@ -5,14 +5,21 @@ import TaskPage from '../views/TaskPage.vue'
 
 const routes = [
   {
-    path: '/login',
+    path: '/',
     name: 'LoginPage',
     component: LoginPage, 
   },
   {
     path: '/tasks',
-    name: 'TaskPage',
-    component: TaskPage, 
+    name: 'Tasks',
+    component: TaskPage,
+    // beforeEnter: (to, from, next) => {
+    //   if (localStorage.getItem('userLoggedIn') === 'true') {
+    //     next();  
+    //   } else {
+    //     next({ name: 'LoginPage' }); 
+    //   }
+    // }
   }
 ];
 
